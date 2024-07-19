@@ -47,7 +47,7 @@ export class BlockListController {
   @Delete('item/:id')
   @ApiOkResponse({ type: BlockItemDto })
   removeBlockItem(
-    @Param(ParseIntPipe) id: number,
+    @Param('id', ParseIntPipe) id: number,
     @SessionInfo() session: GetSessionInfoDto
   ): Promise<BlockItemDto> {
     return this.blockListService.removeItem(session.id, id)
