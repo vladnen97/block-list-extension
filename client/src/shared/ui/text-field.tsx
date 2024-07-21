@@ -8,7 +8,10 @@ type TextFieldProps = {
 } & ComponentPropsWithoutRef<'input'>
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ className, inputClassName, label, error, ...props }, ref) => {
+  function TextField(
+    { className, inputClassName, label, error, ...props },
+    ref
+  ) {
     const id = useId()
 
     return (

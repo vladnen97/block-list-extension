@@ -14,7 +14,10 @@ type SelectFieldProps = {
 } & ComponentPropsWithoutRef<'select'>
 
 export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
-  ({ className, selectClassName, label, options, error, ...props }, ref) => {
+  function SelectField(
+    { className, selectClassName, label, options, error, ...props },
+    ref
+  ) {
     const id = useId()
 
     return (

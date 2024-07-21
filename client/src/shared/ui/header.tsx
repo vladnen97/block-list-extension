@@ -12,7 +12,7 @@ export const Header = ({
   return (
     <header
       className={clsx(
-        'px-4 py-3 border-b border-b-slate-300 flex items-center justify-between',
+        'px-4 py-3 border-b border-b-slate-300 flex items-center justify-between bg-white',
         className
       )}
     >
