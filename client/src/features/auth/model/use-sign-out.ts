@@ -2,16 +2,17 @@ import { useRouter } from 'next/router'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { authControllerSignOut } from '@/shared/api/generated'
 import { ROUTES } from '@/shared/constants/routes'
+import { useResetSession } from '@/entities/session/queries'
 
 export const useSignOut = () => {
   const router = useRouter()
-  const queryClient = useQueryClient()
+  const resetSession = useResetSession()
 
   const logoutMutation = useMutation({
     mutationFn: authControllerSignOut,
     onSuccess: async () => {
       void router.push(ROUTES.SIGN_IN)
-      queryClient.removeQueries({ queryKey: ['session'] })
+      resetSession()
     },
   })
 

@@ -1,14 +1,9 @@
 import { Header } from '@/shared/ui'
 import { LogoutButton } from '@/features/auth'
-import { useQuery } from '@tanstack/react-query'
-import { authControllerGetSessionInfo } from '@/shared/api/generated'
+import { useSession } from '@/entities/session/queries'
 
 export default function HomePage() {
-  const { data } = useQuery({
-    queryKey: ['session'],
-    queryFn: authControllerGetSessionInfo,
-    staleTime: 3 * 60 * 1000,
-  })
+  const { data } = useSession()
 
   return (
     <div>
