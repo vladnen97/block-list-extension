@@ -7,10 +7,11 @@ export default function HomePage() {
   const { data } = useQuery({
     queryKey: ['session'],
     queryFn: authControllerGetSessionInfo,
+    staleTime: 3 * 60 * 1000,
   })
 
   return (
-    <main>
+    <div>
       <Header
         right={
           <div className={'flex gap-2 items-center'}>
@@ -19,7 +20,7 @@ export default function HomePage() {
           </div>
         }
       />
-      Main
-    </main>
+      <main>Main</main>
+    </div>
   )
 }
