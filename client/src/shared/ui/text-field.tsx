@@ -26,7 +26,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           id={id}
           className={clsx(
             inputClassName,
-            'rounded border border-slate-300 focus:border-teal-600 px-2 h-10 outline-none'
+            'rounded border border-slate-300 focus:border-teal-600 px-2 h-10 outline-none transition duration-200'
           )}
           ref={ref}
         />

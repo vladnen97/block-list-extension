@@ -32,7 +32,7 @@ export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
           id={id}
           className={clsx(
             selectClassName,
-            'rounded border border-slate-300 focus:border-teal-600 px-2 h-10 outline-none'
+            'rounded border border-slate-300 focus:border-teal-600 px-2 h-10 outline-none transition duration-200'
           )}
           ref={ref}
         >

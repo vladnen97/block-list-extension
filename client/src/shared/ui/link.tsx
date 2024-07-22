@@ -10,7 +10,7 @@ export const UiLink = ({ className, ...props }: Props) => {
       {...props}
       className={clsx(
         className,
-        'text-teal-500 cursor-pointer hover:text-teal-600'
+        'text-teal-500 cursor-pointer hover:text-teal-600 transition duration-200'
       )}
     />
   )
