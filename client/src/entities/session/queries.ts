@@ -1,7 +1,7 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { authControllerGetSessionInfo } from '@/shared/api/generated'
 
-const sessionKey = ['session']
+const sessionKey = ['session'] as const
 
 export function useSession() {
   return useQuery({

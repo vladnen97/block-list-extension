@@ -1,21 +1,17 @@
 import { Header } from '@/shared/ui'
-import { LogoutButton } from '@/features/auth'
-import { useSession } from '@/entities/session/queries'
+import { ToggleBlockingButton } from '@/features/toggle-blocking'
+import { Profile } from '@/widgets/profile'
 
 export default function HomePage() {
-  const { data } = useSession()
-
   return (
-    <div>
-      <Header
-        right={
-          <div className={'flex gap-2 items-center'}>
-            {data?.email}
-            <LogoutButton />
-          </div>
-        }
-      />
-      <main>Main</main>
+    <div className={'min-h-screen flex flex-col'}>
+      <Header right={<Profile />} />
+      <div className={'grid grid-cols-[200px_1fr] pt-10'}>
+        <aside className={'px-5'}>
+          <ToggleBlockingButton />
+        </aside>
+        <main>Block list</main>
+      </div>
     </div>
   )
 }
