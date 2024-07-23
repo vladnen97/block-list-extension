@@ -1,6 +1,7 @@
 import { Header } from '@/shared/ui'
 import { ToggleBlockingButton } from '@/features/toggle-blocking'
 import { Profile } from '@/widgets/profile'
+import { AddBlockItemForm, BlockList } from '@/features/block-list'
 
 export default function HomePage() {
   return (
@@ -10,7 +11,11 @@ export default function HomePage() {
         <aside className={'px-5'}>
           <ToggleBlockingButton />
         </aside>
-        <main>Block list</main>
+        <main className={'px-4'}>
+          <h1 className={'text-2xl mb-6'}>Block List</h1>
+          <AddBlockItemForm />
+          <BlockList />
+        </main>
       </div>
     </div>
   )
