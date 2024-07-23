@@ -1,6 +1,7 @@
 import { useBlockItems } from '@/features/block-list/model/use-block-items'
 import { Spinner, TextField } from '@/shared/ui'
 import { BlockItem } from '@/features/block-list/ui/block-item'
+import { useDebouncedValue } from '@/shared/lib/react-std'
 
 export const BlockList = () => {
   const { q, items, setQ, isLoading } = useBlockItems()

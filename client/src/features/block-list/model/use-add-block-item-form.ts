@@ -7,6 +7,7 @@ export const useAddBlockItemForm = () => {
     handleSubmit,
     register,
     watch,
+    reset,
     formState: { isValid },
   } = useForm<{
     data: string
@@ -17,7 +18,13 @@ export const useAddBlockItemForm = () => {
   const type = watch('type')
 
   return {
-    handleSubmit: handleSubmit((data) => addBlockItemMutation.mutate(data)),
+    handleSubmit: handleSubmit((data) =>
+      addBlockItemMutation.mutate(data, {
+        onSuccess() {
+          reset()
+        },
+      })
+    ),
     isLoading: addBlockItemMutation.isPending,
     isValid,
     register,
