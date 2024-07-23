@@ -13,13 +13,11 @@ export const BlockList = () => {
         onChange={(e) => setQ(e.target.value)}
         label={'Search'}
       />
-      <div
-        className={'rounded-xl bg-slate-100/50 px-10 py-6 flex flex-col gap-3'}
-      >
+      <div className={'py-6 flex flex-col gap-3'}>
         {isLoading ? (
           <Spinner classname={'w-15 h-15 mx-auto text-teal-600'} />
         ) : items.length === 0 ? (
-          'List is Empty'
+          <div className={'text-xl text-center'}>List is empty...</div>
         ) : (
           items.map((item) => (
             <BlockItem

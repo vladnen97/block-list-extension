@@ -13,7 +13,7 @@ export const BlockItem = ({
   const removeBlockItemMutation = useRemoveBlockItemMutation()
 
   return (
-    <div className={'flex gap-2 items-center'}>
+    <div className={'flex gap-2 items-center rounded-xl bg-white px-4 py-2'}>
       <div>
         <div className={'text-lg'}>{data}</div>
         <div className={'text-slate-500'}>{type}</div>
