@@ -1,10 +1,10 @@
 import { AppProvider } from './app-providers'
-import { HomePage } from '@pages/home'
+import { AppRouter } from './app-router'
 
 export function App() {
   return (
     <AppProvider>
-      <HomePage />
+      <AppRouter />
     </AppProvider>
   )
 }

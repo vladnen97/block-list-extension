@@ -10,6 +10,7 @@ export const createInstance = async <T>({
   url,
   method,
   params,
+  headers,
   data,
 }: {
   url: string
@@ -23,6 +24,7 @@ export const createInstance = async <T>({
     `${baseURL}${url}` + new URLSearchParams(params),
     {
       credentials: 'include',
+      headers,
       method,
       ...(data ? { body: JSON.stringify(data) } : {}),
     }
