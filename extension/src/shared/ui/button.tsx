@@ -14,7 +14,7 @@ export const Button = ({ className, variant = 'primary', ...props }: Props) => {
       {...props}
       className={clsx(
         className,
-        'px-6 h-12 rounded cursor-pointer flex ga-2 items-center justify-center disabled:cursor-not-allowed disabled:opacity-50 transition duration-200',
+        'px-6 h-12 rounded cursor-pointer flex ga-2 items-center justify-center disabled:cursor-not-allowed disabled:opacity-50 transition duration-200 text-xl',
         {
           primary:
             'text-white bg-teal-500 [&:hover:not(:disabled)]:bg-teal-600 shadow shadow-teal-500/30',

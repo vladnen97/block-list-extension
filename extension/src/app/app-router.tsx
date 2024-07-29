@@ -1,7 +1,7 @@
-import { useSession } from '../entities/session'
-import { PageSpinner } from '../shared/ui/page-spinner'
-import { HomePage } from '../pages/home'
-import { NotAuthPage } from '../pages/not-auth'
+import { useSession } from '@entities/session'
+import { PageSpinner } from '@shared/ui/page-spinner'
+import { HomePage } from '@pages/home'
+import { NotAuthPage } from '@pages/not-auth'
 
 export const AppRouter = () => {
   const { isLoading, isSuccess } = useSession()
