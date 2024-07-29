@@ -1,5 +1,10 @@
-export function App() {
-  return <div>App</div>
-}
+import { AppProvider } from './app-providers'
+import { HomePage } from '@pages/home'
 
-export default App
+export function App() {
+  return (
+    <AppProvider>
+      <HomePage />
+    </AppProvider>
+  )
+}
